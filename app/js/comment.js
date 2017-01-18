@@ -1,9 +1,8 @@
 class Comment{
-    constructor(){
-        // this.commentID = obj.commentID;
-        // this.postID = obj.postID;
-        this.test = 1;
-        // this.content = obj.content;
+    constructor(obj){
+        this.commentID = Utils.genereteKey();
+        this.postID = obj.postID;
+        this.content = obj.content;
+        this.author = obj.author;
     }
-
 }

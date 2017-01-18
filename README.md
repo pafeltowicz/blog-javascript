@@ -1,10 +1,4 @@
-STARTER-PACK Gulp+Bower+Sass+Browser-sync+Wiredep
-
-Main tasks:
- - Livereload
- - Sass compiler
- - Sass error handler
- - Bower autoinjector
+Simple Blog Vanilla JS
 
 Usage:
  1. npm install

@@ -4,11 +4,11 @@ class Model {
     }
 
     addPost(post){
-        this.store.set(post, post);
+        this.store.set(post.postID, post);
     }
 
     getPost(key){
-        // return this.store.get(key);
+        return this.store.get(key);
     }
 
     get(){

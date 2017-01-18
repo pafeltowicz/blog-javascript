@@ -1,7 +1,8 @@
 class Post {
-    constructor(title, content){
-        this.title = title;
-        this.content = content;
+    constructor(obj){
+        this.postID = Utils.genereteKey();
+        this.title = obj.title;
+        this.content = obj.content;
         this.comment = new Map();
     }
     setTitle(text){
@@ -10,10 +11,10 @@ class Post {
     setContent(text){
         this.content = text;
     }
-    getPost(){
-        return this;
-    }
     addComment(comment){
-        this.comment.set(comment, comment);
+        this.comment.set(comment.commentID, comment);
+    }
+    getComment(){
+        return this.comment;
     }
 }
