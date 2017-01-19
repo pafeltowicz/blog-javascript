@@ -1,9 +1,9 @@
 class Post {
     constructor(obj){
         this.postID = Utils.genereteKey();
-        this.title = obj.title;
-        this.content = obj.content;
-        this.comment = new Map();
+        this.title = obj ? obj.title : null;
+        this.content = obj ? obj.content : null;
+        this.comment = [];
     }
     setTitle(text){
         this.title = text;
@@ -12,9 +12,14 @@ class Post {
         this.content = text;
     }
     addComment(comment){
-        this.comment.set(comment.commentID, comment);
+        this.comment.push(comment);
     }
-    getComment(){
+    getComments(){
         return this.comment;
+    }
+    getComment(key){
+        return this.comment.find((comment) => {
+            return comment.postID === key;
+        })
     }
 }

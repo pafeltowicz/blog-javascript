@@ -47,7 +47,9 @@ class Component {
                 }
             }
         }
-        this.comp.id = String(Math.random().toString(16).slice(2));
+        if(this.obj.id){
+            this.comp.id = this.obj.id;
+        }
         this.comp.textContent = this.obj.text;
     }
 }

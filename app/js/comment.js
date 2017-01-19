@@ -1,8 +1,15 @@
 class Comment{
     constructor(obj){
         this.commentID = Utils.genereteKey();
-        this.postID = obj.postID;
-        this.content = obj.content;
-        this.author = obj.author;
+        this.postID = obj ? obj.postID : null;
+        this.content = obj ? obj.content : null;
+        this.author = obj ? obj.author : null;
     }
+
+    setContent(text){
+        this.content = text;
+    }
+
+
+
 }
