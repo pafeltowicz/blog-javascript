@@ -1,10 +1,10 @@
-class AddCommentComponent extends Component{
+class AddCommentComponent extends Component {
     constructor(controller, props) {
         super(controller, props);
         this.model = this.controller.model;
     }
 
-    addEvents(){
+    addEvents() {
         return {
             submit: function (e) {
                 e.preventDefault();
@@ -18,7 +18,7 @@ class AddCommentComponent extends Component{
         }
     }
 
-    render(){
+    render() {
         return `
             <form method="post">
             <div class="comment-add-form active">
@@ -41,12 +41,12 @@ class AddCommentComponent extends Component{
 }
 
 
-class CommentComp extends Component{
+class CommentComp extends Component {
     constructor(controller, props) {
         super(controller, props);
     }
 
-    render(){
+    render() {
         return `
             <div class="blog-comment">
                 <h5>${this.props.author}</h5>
@@ -65,12 +65,13 @@ class Article extends Component {
         let title = this.props.title;
         let content = this.props.content;
         return `
-                <article class="blog-post">
-                    <h2 class="blog-post-title"><a href="#">${title}</a></h2>
-                    <p class="blog-post-content">${content}</p>
-                </article>`;
+            <article class="blog-post">
+                <h2 class="blog-post-title"><a href="#">${title}</a></h2>
+                <p class="blog-post-content">${content}</p>
+            </article>`;
     }
-    addChildren(){
+
+    addChildren() {
         let commentArr = [];
         this.props.comment.forEach((item) => {
             let comment = new CommentComp(this.controller, item);

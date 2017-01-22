@@ -9,7 +9,9 @@ class Controller {
 
     fetch(){
         let json = window.localStorage.getItem("store");
-        this.model.store = Utils.toMap(json);
+        if(json !== null){
+            this.model.store = Utils.toMap(json);
+        }
         this.view.render(this);
     }
 
