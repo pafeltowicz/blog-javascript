@@ -2,9 +2,25 @@ class Controller {
     constructor(model, view) {
         this.model = model;
         this.view = view;
+        this.fetch();
         this.$form = window.document.getElementById("form");
         this.assignEvent();
-        this.view.render();
+    }
+
+    fetch(){
+        let json = window.localStorage.getItem("store");
+        this.model.store = Utils.toMap(json);
+        this.view.render(this);
+    }
+
+    save(){
+        window.localStorage.setItem("store", Utils.toJSON(this.model.store));
+    }
+
+    addComment(post, comment){
+        post.addComment(comment);
+        this.view.render(this);
+        this.save();
     }
 
     assignEvent() {
@@ -13,7 +29,7 @@ class Controller {
             this.addPost({
                 title: e.target.title.value,
                 content: e.target.content.value
-            })
+            });
             e.target.title.value = "";
             e.target.content.value = "";
         }, false);
@@ -21,8 +37,7 @@ class Controller {
 
     addPost(obj) {
         this.model.addPost(new Post(obj));
-        this.view.render();
-        console.log(this.model.store);
+        this.view.render(this);
+        this.save();
     }
-
 }

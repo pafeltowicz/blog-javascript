@@ -13,18 +13,7 @@ class Model {
         })
     }
 
-    removePost(key) {
-        let storeIndex = this.store.findIndex((entry) => {
-            return entry.id === key;
-        });
-        this.store.splice(storeIndex, 1);
-    }
-
     each(callback){
         return this.store.forEach(callback);
-    }
-
-    toJSON(){
-        return Utils.toJSON(this.store);
     }
 }

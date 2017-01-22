@@ -1,58 +1,65 @@
 class Component {
-
-    constructor(obj) {
-        this.comp = {};
-        this.obj = obj;
-        this.create();
-        this._children();
-    }
-
-    addEvent(event, callback){
-        this.comp.addEventListener(event, callback, false);
-    }
-
-    toggleClass(className){
-        this.comp.classList.toggle(className);
-    }
-
-    getChildren(i){
-        return this.obj.children[i];
-    }
-    render(){
-        return this.comp;
-    }
-
-    setText(text) {
-        this.comp.textContent = text;
-        this._children();
-    }
-
-    _children() {
-        if(this.obj.children){
-            this.obj.children.forEach((item) => {
-                this.comp.appendChild(item.render());
-            });
-        }
+    constructor(controller, props = {}) {
+        this.props = props;
+        this.component = {};
+        this.controller = controller;
+        this.toHTMLElement();
+        this.children();
+        this.events();
     }
 
     create() {
-        this.comp = window.document.createElement(this.obj.type);
-        this.obj.attr.className.forEach((item) => {
-            this.comp.classList.add(item);
-        })
-        for (let prop in this.obj.attr) {
-            if (this.obj.attr.hasOwnProperty(prop)) {
-                if (prop !== 'className') {
-                    this.comp.setAttribute(prop, this.obj.attr[prop]);
+        return this.component;
+    }
+
+    attr(obj) {
+        for (let attr in obj) {
+            if (obj.hasOwnProperty(attr)) {
+                if (attr !== 'className') {
+                    this.component.setAttribute(attr, obj[attr]);
                 }
             }
         }
-        if(this.obj.id){
-            this.comp.id = this.obj.id;
+    }
+
+    toHTMLElement() {
+        let parser = new DOMParser();
+        let $document = parser.parseFromString(this.render(), 'text/html');
+        this.component = $document.querySelector('body').firstElementChild;
+    }
+
+    render() {
+        return {};
+    }
+
+    addChildren() {
+        return false;
+    }
+
+    addEvents() {
+        return {};
+    }
+
+    events() {
+        let events = this.addEvents();
+        for (let event in events) {
+            if (events.hasOwnProperty(event)) {
+                this.component.addEventListener(event, events[event], false);
+            }
         }
-        this.comp.textContent = this.obj.text;
+    }
+
+    children() {
+        let arr = this.addChildren();
+        if (arr) {
+            arr.forEach((item) => {
+                this.component.appendChild(item.create());
+            });
+        }
     }
 }
+
+
 
 
 
