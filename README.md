@@ -1,6 +1,9 @@
 Simple Blog Vanilla JS
 
-Usage:
+Preview live:
+https://przemyslaw-afeltowicz.github.io/blog-javascirpt/app/
+
+Developer Usage:
  1. npm install
  2. npm start
 
