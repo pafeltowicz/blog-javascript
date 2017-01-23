@@ -3,7 +3,7 @@ class Component {
         this.props = props;
         this.component = {};
         this.controller = controller;
-        this.toHTMLElement();
+        this.createDOM();
         this.children();
         this.events();
     }
@@ -22,10 +22,10 @@ class Component {
         }
     }
 
-    toHTMLElement() {
-        let parser = new DOMParser();
-        let $document = parser.parseFromString(this.render(), 'text/html');
-        this.component = $document.querySelector('body').firstElementChild;
+    createDOM() {
+        this.component = new DOMParser()
+            .parseFromString(this.render(), 'text/html')
+            .querySelector('body').firstElementChild;
     }
 
     render() {

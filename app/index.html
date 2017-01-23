@@ -12,57 +12,62 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-        <div class="container">
-            <a class="navbar-brand" href="#">Blog</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"> + Dodaj post</a>
-                    </li>
-                </ul>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <div class="container">
+        <a class="navbar-brand" href="#">Blog</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> + Dodaj post</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <form method="post" id="form">
+        <div class="blog-add-form active">
+            <h4>Dodaj nowy artykuł</h4>
+            <div class="form-group">
+                <label>Tytuł posta</label>
+                <input type="text" class="form-control" name="title" placeholder="Wpisz tytuł posta">
+            </div>
+            <div class="form-group">
+                <label>Treść posta</label>
+                <textarea name="content" class="form-control" id="exampleTextarea" rows="3"
+                          placeholder="Wpisz treść posta"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Dodaj post</button>
             </div>
         </div>
-    </nav>
+    </form>
+</div>
 
-    <section>
-        <div class="container">
-            <form method="post" id="form">
-                <div class="blog-add-form active">
-                    <h4>Dodaj nowy artykuł</h4>
-                    <div class="form-group">
-                        <label>Tytuł posta</label>
-                        <input type="text" class="form-control" name="title" placeholder="Wpisz tytuł posta">
-                    </div>
-                    <div class="form-group">
-                        <label>Treść posta</label>
-                        <textarea name="content" class="form-control" id="exampleTextarea" rows="3" placeholder="Wpisz treść posta"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Dodaj post</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
+<div id="app"></div>
 
-    <div id="app"></div>
+<footer class="blog-footer">
+    <p><a href="#">Blog Vanilla JS</a></p>
+</footer>
 
-    <footer class="blog-footer">
-        <p>
-            <a href="#">Blog Vanilla JS</a>
-        </p>
-    </footer>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/components/component.js"></script>
+<script type="text/javascript" src="js/components/app.js"></script>
+<script type="text/javascript" src="js/components/article.js"></script>
+<script type="text/javascript" src="js/components/bootstrap.js"></script>
+<script type="text/javascript" src="js/components/add.comment.js"></script>
+<script type="text/javascript" src="js/components/comment.js"></script>
+<script type="text/javascript" src="js/components/container.js"></script>
 
-    <script type="text/javascript" src="js/utils.js"></script>
-    <script type="text/javascript" src="js/component.js"></script>
-    <script type="text/javascript" src="js/model.js"></script>
-    <script type="text/javascript" src="js/App.js"></script>
-    <script type="text/javascript" src="js/controller.js"></script>
-    <script type="text/javascript" src="js/post.js"></script>
-    <script type="text/javascript" src="js/comment.js"></script>
-    <script type="text/javascript" src="js/view.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/models/model.js"></script>
+<script type="text/javascript" src="js/models/post.js"></script>
+<script type="text/javascript" src="js/models/comment.js"></script>
+<script type="text/javascript" src="js/components/app.js"></script>
+<script type="text/javascript" src="js/controllers/controller.js"></script>
+<script type="text/javascript" src="js/controllers/storage.js"></script>
+<script type="text/javascript" src="js/views/view.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 
 </body>
 </html>

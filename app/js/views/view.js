@@ -4,8 +4,8 @@ class View{
         this.$app = document.getElementById("app");
     }
     render(controller){
-        const AppComp = new App(controller);
+        const boot = new Bootstrap(controller);
         this.$app.innerHTML = "";
-        this.$app.appendChild(AppComp.create());
+        this.$app.appendChild(boot.create());
     }
 }

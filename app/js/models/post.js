@@ -5,6 +5,7 @@ class Post {
         this.content = obj ? obj.content : null;
         this.comment = [];
     }
+
     addComment(comment){
         this.comment.push(comment);
     }

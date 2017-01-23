@@ -1,10 +1,1 @@
-﻿/*!
- * Starterpack by veranoo
- * Author: Przemysław Afeltowicz
- **
- * Bootstrap v4.0.0 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- **
- * normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
-*/.blog-add-form{margin:20px 0;padding:15px;border:solid 1px #ccc;display:none}.blog-add-form.active{display:block}.blog-main{margin-top:20px}.blog-main .blog-post{padding:15px;border:solid 1px #ccc;margin-bottom:20px}.blog-footer{text-align:center}
+.blog-add-form{margin:20px 0;padding:15px;border:solid 1px #ccc;display:none}.blog-add-form.active{display:block}.blog-main{margin-top:20px}.blog-main .blog-post{padding:15px;border:solid 1px #ccc;margin-bottom:20px}.blog-footer{text-align:center}

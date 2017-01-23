@@ -2,21 +2,12 @@ class Controller {
     constructor(model, view) {
         this.model = model;
         this.view = view;
-        this.fetch();
+        this.storage = new Storage(this.model);
         this.$form = window.document.getElementById("form");
+        this.formData = new FormData(this.$form);
         this.assignEvent();
-    }
-
-    fetch(){
-        let json = window.localStorage.getItem("store");
-        if(json !== null){
-            this.model.store = Utils.toMap(json);
-        }
         this.view.render(this);
-    }
-
-    save(){
-        window.localStorage.setItem("store", Utils.toJSON(this.model.store));
+        console.log(this.formData);
     }
 
     addComment(post, comment){
@@ -25,9 +16,17 @@ class Controller {
         this.save();
     }
 
+    save(){
+        this.storage.setStorage(Utils.toJSON(this.model.store));
+    }
+
     assignEvent() {
+        let req = new XMLHttpRequest();
         this.$form.addEventListener("submit", (e) => {
             e.preventDefault();
+            let formdata = new FormData(this.$form);
+            req.open("post", "index.php");
+            req.send(formdata);
             this.addPost({
                 title: e.target.title.value,
                 content: e.target.content.value

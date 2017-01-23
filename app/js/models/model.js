@@ -10,7 +10,7 @@ class Model {
     getPost(key){
         return this.store.find((store) => {
             return store.postID === key;
-        })
+        });
     }
 
     each(callback){
