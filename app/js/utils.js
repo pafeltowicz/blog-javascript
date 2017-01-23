@@ -1,5 +1,5 @@
 class Utils{
-    static genereteKey(){
+    static generateKey(){
         return String(Math.random().toString(16).slice(2));
     }
 

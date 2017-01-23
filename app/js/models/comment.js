@@ -1,7 +1,7 @@
 class Comment{
-    constructor(obj){
-        this.postID = obj ? obj.postID : null;
-        this.content = obj ? obj.content : null;
-        this.author = obj ? obj.author : null;
+    constructor({ postID = "", content = "", author = ""}){
+        this.postID = postID
+        this.content = content
+        this.author = author
     }
 }

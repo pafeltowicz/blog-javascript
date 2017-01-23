@@ -21,12 +21,8 @@ class Controller {
     }
 
     assignEvent() {
-        let req = new XMLHttpRequest();
         this.$form.addEventListener("submit", (e) => {
             e.preventDefault();
-            let formdata = new FormData(this.$form);
-            req.open("post", "index.php");
-            req.send(formdata);
             this.addPost({
                 title: e.target.title.value,
                 content: e.target.content.value

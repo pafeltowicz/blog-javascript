@@ -11,10 +11,6 @@ class Storage {
         this.storage = window.localStorage.setItem("store", json);
     }
 
-    getStorage(){
-        return this.storage;
-    }
-
     check(){
         if(this.storage){
             this.array = Utils.toMap(this.storage);
