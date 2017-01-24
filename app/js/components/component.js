@@ -33,7 +33,7 @@ class Component {
     }
 
     addChildren() {
-        return false;
+        return [];
     }
 
     addEvents() {

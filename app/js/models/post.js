@@ -1,6 +1,6 @@
 class Post {
-    constructor({title = "", content = ""}){
-        this.postID = Utils.generateKey();
+    constructor({postID = Utils.generateKey(), title = "", content = ""}){
+        this.postID = postID;
         this.title = title;
         this.content = content;
         this.comment = [];

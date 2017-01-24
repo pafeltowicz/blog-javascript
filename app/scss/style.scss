@@ -1,11 +1,13 @@
-.blog-add-form {
-  margin: 20px 0;
-  padding: 15px;
-  border: solid 1px #ccc;
+#formAddPost{
   display: none;
   &.active {
     display: block;
   }
+}
+.blog-add-form {
+  margin: 20px 0;
+  padding: 15px;
+  border: solid 1px #ccc;
 }
 
 .blog-main {

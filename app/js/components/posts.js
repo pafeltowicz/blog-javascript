@@ -1,4 +1,4 @@
-class Container extends Component {
+class Posts extends Component {
     constructor(controller) {
         super(controller);
     }
@@ -9,7 +9,7 @@ class Container extends Component {
 
     addChildren() {
         let article = [];
-        this.controller.model.store.forEach((item) => {
+        this.controller.model.each((item) => {
             let post = new Article(this.controller, item);
             article.push(post);
         });

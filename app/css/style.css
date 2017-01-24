@@ -1,1 +1,1 @@
-.blog-add-form{margin:20px 0;padding:15px;border:solid 1px #ccc;display:none}.blog-add-form.active{display:block}.blog-main{margin-top:20px}.blog-main .blog-post{padding:15px;border:solid 1px #ccc;margin-bottom:20px}.blog-footer{text-align:center}
+#formAddPost{display:none}#formAddPost.active{display:block}.blog-add-form{margin:20px 0;padding:15px;border:solid 1px #ccc}.blog-main{margin-top:20px}.blog-main .blog-post{padding:15px;border:solid 1px #ccc;margin-bottom:20px}.blog-footer{text-align:center}

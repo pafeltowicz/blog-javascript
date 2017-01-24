@@ -8,7 +8,13 @@ class Bootstrap extends Component{
     }
 
     addChildren() {
-        const container = new Container(this.controller);
+        let container = {};
+        if(this.controller.route !== ""){
+             container = new SinglePost(this.controller);
+        }else{
+            container = new Posts(this.controller);
+        }
+
         return [container]
     }
 }

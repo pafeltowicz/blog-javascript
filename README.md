@@ -1,8 +1,6 @@
-Simple Blog Vanilla JS
-====================
+# Simple Blog Vanilla JS
 
-Preview live:
----------------------
+## Preview live:
 https://przemyslaw-afeltowicz.github.io/blog-javascirpt/app/
 
 ### Developer Usage:

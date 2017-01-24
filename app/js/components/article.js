@@ -6,9 +6,10 @@ class Article extends Component {
     render() {
         let title = this.props.title;
         let content = this.props.content;
+        let postID = this.props.postID;
         return `
             <article class="blog-post">
-                <h2 class="blog-post-title"><a href="#">${title}</a></h2>
+                <h2 class="blog-post-title"><a href="#post/${postID}">${title}</a></h2>
                 <p class="blog-post-content">${content}</p>
             </article>`;
     }

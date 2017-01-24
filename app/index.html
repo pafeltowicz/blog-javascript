@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"> + Dodaj post</a>
+                    <a id="addPostButton" class="nav-link" href="#"> + Dodaj post</a>
                 </li>
             </ul>
         </div>
@@ -26,8 +26,8 @@
 </nav>
 
 <div class="container">
-    <form method="post" id="form">
-        <div class="blog-add-form active">
+    <form method="post" id="formAddPost" class="">
+        <div class="blog-add-form">
             <h4>Dodaj nowy artykuł</h4>
             <div class="form-group">
                 <label>Tytuł posta</label>
@@ -53,17 +53,15 @@
 
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/components/component.js"></script>
-<script type="text/javascript" src="js/components/app.js"></script>
 <script type="text/javascript" src="js/components/article.js"></script>
+<script type="text/javascript" src="js/components/singlepost.js"></script>
 <script type="text/javascript" src="js/components/bootstrap.js"></script>
 <script type="text/javascript" src="js/components/add.comment.js"></script>
 <script type="text/javascript" src="js/components/comment.js"></script>
-<script type="text/javascript" src="js/components/container.js"></script>
-
+<script type="text/javascript" src="js/components/posts.js"></script>
 <script type="text/javascript" src="js/models/model.js"></script>
 <script type="text/javascript" src="js/models/post.js"></script>
 <script type="text/javascript" src="js/models/comment.js"></script>
-<script type="text/javascript" src="js/components/app.js"></script>
 <script type="text/javascript" src="js/controllers/controller.js"></script>
 <script type="text/javascript" src="js/models/storage.js"></script>
 <script type="text/javascript" src="js/views/view.js"></script>
