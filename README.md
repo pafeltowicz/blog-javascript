@@ -1,7 +1,7 @@
 # Simple Blog Vanilla JS
 
 ## Preview live:
-https://przemyslaw-afeltowicz.github.io/blog-javascirpt/app/
+https://przemyslaw-afeltowicz.github.io/blog-javascript/app/
 
 ### Developer Usage:
  1. npm install
